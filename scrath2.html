@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Responsive Navbar with Dropdown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background: #2c3e50;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 20px;
+}
+
+.navbar-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-icon {
+    display: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-links {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+.nav-links i {
+    margin-left: 5px;
+}
+
+.nav-contact {
+    background: #e74c3c;
+    border-radius: 5px;
+}
+
+.nav-contact:hover {
+    background: #c0392b;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #34495e;
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-item a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.dropdown-item i {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    top: 50px;
+}
+
+.dropdown-item:hover a,
+.dropdown-item:hover i {
+    color: #ddd;
+}
+
+.dropdown-item:hover i {
+    transform: rotate(90deg);
+}
+.navbar ul li a:hover i {
+    transform: rotate(90deg);
+}
+
+.navbar ul li a i {
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 960px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+        background: #2c3e50;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        left: 0;
+        opacity: 1;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        background: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .dropdown-item {
+        width: 100%;
+    }
+
+    .dropdown .dropdown-menu {
+        background: #34495e;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+</style>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">Sandbox</a>
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-links">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-links">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-links">Blog</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-links dropdown-toggle">Pages <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a href="#">Page 1 <i class="fas fa-angle-right"></i></a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">Page 2 <i class="fas fa-angle-right"></i></a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#">Page 3 <i class="fas fa-angle-right"></i></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-links">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-links">Elements</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-links nav-contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
