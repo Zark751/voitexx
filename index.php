@@ -107,14 +107,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
                 <div class="container flex-lg-row flex-nowrap align-items-center">
                     <div class="navbar-brand w-100">
-                        <a href="./index.html">
+                        <a href="./index.php">
                             <img src="./assets/img/voitex-images/logo-1.svg"
                                 srcset="./assets/img/voitex-images/logo-1.svg" alt="" />
                         </a>
                     </div>
                     <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
                         <div class="offcanvas-header d-lg-none">
-                            <a href="./index.html">
+                            <a href="./index.php">
                                 <img src="./assets/img/voitex-images/logo-1.svg"
                                     srcset="./assets/img/voitex-images/logo-1.svg" alt="" />
                             </a>
@@ -126,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle font-500" href="#" data-bs-toggle="dropdown">Solutions</a>
                                     <ul class="dropdown-menu">
-                                        <li class="dropdown-item font-500"><a class="dropdown-link" href="./index.html"><img
+                                        <li class="dropdown-item font-500"><a class="dropdown-link" href="./index.php"><img
                                                     src="./assets/img/voitex-images/hotline-image-navbar.png" alt="">
                                                 Hotline</a></li>
                                         <li class="dropdown-item font-500"><a class="dropdown-link"
@@ -165,14 +165,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <a class="nav-link font-500" href="About-Us.html">About</a>
                                 </li>
                                 <li class="nav-item dropdown dropdown-mega font-500">
-                                    <a class="nav-link font-500" href="./Contact-Form.html">Contact</a>
+                                    <a class="nav-link font-500" href="./Contact-Form.php">Contact</a>
                                 </li>
                             </ul>
                             <!-- /.navbar-nav -->
                             <div class="offcanvas-footer d-lg-none">
                                 <ul class="navbar-nav align-items-center">
                                     <li class="nav-item-off">
-                                        <a href="Contact-Form.html" class="btn offcanvas-btn" id="transparent-btn">See Demo</a>
+                                        <a href="Contact-Form.php" class="btn offcanvas-btn" id="transparent-btn">See Demo</a>
                                         <!-- /.social -->
                                     </li>
                                     <li class="nav-item-off login">
@@ -242,8 +242,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </p>
                             <div class="bottom-row-communication1">
                                 <div class="try-voitex-button-communication1">
-                                    <a href="Contact-Form.html"><button class="demo-now btn"> Demo now</button></a>
-                                    <a href="Contact-Form.html"><button class="learn-more btn"> Learn more</button></a>
+                                    <a href="Contact-Form.php"><button class="demo-now btn"> Demo now</button></a>
+                                    <a href="Contact-Form.php"><button class="learn-more btn"> Learn more</button></a>
                                 </div>
                                 <div class="arrow-image-wrapper">
                                     <img src="./assets/img/voitex-images/arrow-down-image.png" alt="">
@@ -284,7 +284,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <!-- section 02 Start  -->
 
-        <section id="sec2">
+        <!-- <section id="sec2">
             <div class="container mt-5">
                 <div class="row">
                     <div class="col-12" data-aos="fade-down" data-aos-duration="1000" >
@@ -296,8 +296,64 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </div>
 
+        </section> -->
+        <section id="sec-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="text-center all-text-color">Proud to service a community of leading hotlines! 
+                        </p>
+                    </div>
+                    <div class="row" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="col-lg-1 col-4">
+                            <div class="image-wrapper">
+                                <img src="./assets/img/voitex-images/first-image-index.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-4">
+                            <div class="image-wrapper">
+                                <img src="./assets/img/voitex-images/second-image-index.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-4">
+                            <div class="image-wrapper">
+                                <img src="./assets/img/voitex-images/third-image-index.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-4" >
+                            <div class="image-wrapper">
+                                <img src="./assets/img/voitex-images/fourth-image-index.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-4" >
+                            <div class="image-wrapper">
+                                <img src="./assets/img/voitex-images/fifth-image-index.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-4" >
+                            <div class="image-wrapper">
+                                <img src="./assets/img/voitex-images/sixth-image-index.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-4" >
+                            <div class="image-wrapper">
+                                <img src="./assets/img/voitex-images/seventh-image-index.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-4" >
+                            <div class="image-wrapper">
+                                <img src="./assets/img/voitex-images/second-last-image-index.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-4" >
+                            <div class="image-wrapper">
+                                <img src="./assets/img/voitex-images/last-image-index.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-
 
         <!-- section 02 End  -->
 
@@ -314,7 +370,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     Control</span></h2>
                             <p class="all-text-color">With our innovative no-code IVR system, you have complete control over crafting the ideal
                                 IVR route for your callers without needing any coding expertise.</p>
-                            <a href="Contact-Form.html" class=""><button class="demo-now sec-3-button btn"> Demo now</button></a>
+                            <a href="Contact-Form.php" class=""><button class="demo-now sec-3-button btn"> Demo now</button></a>
                         </div>
                     </div>
                     <div class="col-md-6" data-aos="fade-right" data-aos-duration="500">
@@ -405,7 +461,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <h2 class="all-text-color index-heading">Manage it all with ease through a <span class="pink">sleek user-friendly portal</span>
                                 or directly
                                 from your phone.</h2>
-                            <a href="Contact-Form.html"> <button class="demo-now sec-5-button btn"> Demo
+                            <a href="Contact-Form.php"> <button class="demo-now sec-5-button btn"> Demo
                                     now</button></a>
                         </div>
                     </div>
@@ -503,7 +559,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 exceptional customer service. Our dedicated team goes above and beyond to ensure that
                                 all your questions are answered and that your system is meticulously designed to meet
                                 your unique requirements.</p>
-                            <a href="Contact-Form.html"> <button class="demo-now sec7-button btn"> Demo now</button></a>
+                            <a href="Contact-Form.php"> <button class="demo-now sec7-button btn"> Demo now</button></a>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -764,8 +820,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </p>
                 </div>
                 <div class="try-voitex-button">
-                    <a href="Contact-Form.html"><button class="demo-now btn color-change-1"> Demo now</button></a>
-                    <a href="Contact-Form.html"><button class="learn-more btn color-change-2"> Learn more</button></a>
+                    <a href="Contact-Form.php"><button class="demo-now btn color-change-1"> Demo now</button></a>
+                    <a href="Contact-Form.php"><button class="learn-more btn color-change-2"> Learn more</button></a>
                 </div>
             </div>
         </section>
@@ -785,7 +841,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   <div class="col-lg-4">
                     <div class="widget">
                       <div class="footer-image">
-                        <a href="index.html"><img src="./assets/img/voitex-images/footer-img.PNG" alt=""></a>
+                        <a href="index.php"><img src="./assets/img/voitex-images/footer-img.PNG" alt=""></a>
                       </div>
                       <p class="mb-5 voitex">User-friendly, no-code IVR & VoIP solutions for leading hotlines and businesses, offering utmost flexibility and superior service.</p>
                       <!-- <p class="mb-1 news-letter voitex-opacity">Sign up for our newsletter </p> -->
@@ -803,7 +859,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="widget">
                       <h4 class="widget-title text-white mb-3">Solutions</h4>
                       <ul class="list-unstyled text-reset mb-0">
-                        <li><a href="index.html">Hotline</a></li>
+                        <li><a href="index.php">Hotline</a></li>
                         <li><a href="landing-pbx.html">PBX</a></li>
                         <li><a href="Landingpage-sms.html">SMS</a></li>
                         <li><a href="Landingpage-API.html">API</a></li>
@@ -831,7 +887,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                       <ul class="list-unstyled text-reset  mb-0">
                         <li><a href="About-Us.html">About</a></li>
                         <li><a href="#">Pricing</a></li>
-                        <li><a href="Contact-Form.html">Contact</a></li>
+                        <li><a href="Contact-Form.php">Contact</a></li>
                         <li><a href="privacypolicy.html">Privacy Policy</a></li>
                       </ul>
                     </div>
