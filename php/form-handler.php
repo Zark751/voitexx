@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $data_string = json_encode($data);
 
-    $ch = curl_init('https://astapi1.voitexdev.com/v1/internal_notify/index.html');
+    $ch = curl_init('https://astapi1.voitexdev.com/v1/internal_notify/index.php');
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
