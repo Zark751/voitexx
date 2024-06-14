@@ -29,67 +29,19 @@
 </head>
 
 <body class="solution">
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $email = $_POST['email'];
-    $message_content = $_POST['message'];
-    $service = $_POST['service'];
-
-    $message = "New Form Request:<br><br>First Name: $first_name<br>Last Name: $last_name<br>Email: $email<br>Service: $service<br>Message: $message_content";
-
-    $data = [
-        'message' => $message,
-        'notification_type' => 'email'
-    ];
-
-    $data_string = json_encode($data);
-
-    $ch = curl_init('https://astapi1.voitexdev.com/v1/internal_notify/index.php');
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        'Content-Type: application/json',
-        'Content-Length: ' . strlen($data_string),
-        'auth_key: p75KL0vqz3MSuQRrpUiHonu9PkblYwti'
-    ]);
-
-    $response = curl_exec($ch);
-    if (curl_errno($ch)) {
-        echo json_encode(['status' => 'error', 'message' => 'Curl error: ' . curl_error($ch)]);
-    } else {
-        $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        if ($http_code >= 400) {
-            echo json_encode(['status' => 'error', 'message' => 'HTTP error: ' . $http_code]);
-        } else {
-            echo json_encode(['status' => 'success', 'message' => 'Your message has been sent successfully.']);
-            header("Location: thankyou.php");
-            exit();
-        }
-    }
-    curl_close($ch);
-    exit;
-}
-?>
     <div class="content-wrapper">
         <header class="position-absolute w-100">
             <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
                 <div class="container flex-lg-row flex-nowrap align-items-center">
                     <div class="navbar-brand w-100">
-                        <a href="./index.php">
+                        <a href="./index.html">
                             <img src="./assets/img/voitex-images/logo-1.svg"
                                 srcset="./assets/img/voitex-images/logo-1.svg" alt="" />
                         </a>
                     </div>
                     <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
                         <div class="offcanvas-header d-lg-none">
-                            <a href="./index.php">
+                            <a href="./index.html">
                                 <img src="./assets/img/voitex-images/logo-1.svg"
                                     srcset="./assets/img/voitex-images/logo-1.svg" alt="" />
                             </a>
@@ -101,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle font-500" href="#" data-bs-toggle="dropdown">Solutions</a>
                                     <ul class="dropdown-menu">
-                                        <li class="dropdown-item font-500"><a class="dropdown-link" href="./index.php"><img
+                                        <li class="dropdown-item font-500"><a class="dropdown-link" href="./index.html"><img
                                                     src="./assets/img/voitex-images/hotline-image-navbar.png" alt="">
                                                 Hotline</a></li>
                                         <li class="dropdown-item font-500"><a class="dropdown-link"
@@ -140,14 +92,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <a class="nav-link font-500" href="About-Us.html">About</a>
                                 </li>
                                 <li class="nav-item dropdown dropdown-mega font-500">
-                                    <a class="nav-link font-500" href="./Contact-Form.php">Contact</a>
+                                    <a class="nav-link font-500" href="./Contact-form.html">Contact</a>
                                 </li>
                             </ul>
                             <!-- /.navbar-nav -->
                             <div class="offcanvas-footer d-lg-none">
                                 <ul class="navbar-nav align-items-center">
                                     <li class="nav-item-off">
-                                        <a href="Contact-Form.php" class="btn offcanvas-btn" id="transparent-btn">See Demo</a>
+                                        <a href="Contact-form.html" class="btn offcanvas-btn" id="transparent-btn">See Demo</a>
                                         <!-- /.social -->
                                     </li>
                                     <li class="nav-item-off login">
@@ -239,54 +191,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <!-- /.row -->
             </div>
             <div class="container myfmmm">
-    <form action="" method="post">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="form-4">
-                    <input type="text" name="first_name" placeholder="First name" class="form-control forms"
-                        style="width: 100%; height: 50px;" required>
-                </div>
+                <form id="contactForm" method="post">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-4">
+                                <input type="text" name="first_name" placeholder="First name" class="form-control forms"
+                                    style="width: 100%; height: 50px;" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-4">
+                                <input type="email" name="email" placeholder="Email*" class="form-control forms"
+                                    style="width: 100%; height: 50px;" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-4">
+                                <input type="text" name="last_name" placeholder="Last name" class="form-control forms"
+                                    style="width: 100%; height: 50px;" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-4">
+                                <select class="form-select forms py-2" id="mySelect" name="service" required>
+                                    <option>Select a service</option>
+                                    <option>Hotline</option>
+                                    <option>PBX</option>
+                                    <option>SMS</option>
+                                    <option>API</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="text-area" style="padding-bottom: 20px">
+                                <textarea name="message" rows="10" class="form-control" placeholder="Message"
+                                    style="resize: none; color: #cbcbcb" required></textarea>
+                            </div>
+                        </div>
+                        <div class="btn-div">
+                            <button class="btn btn-primary" type="submit">Send</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="col-lg-6">
-                <div class="form-4">
-                    <input type="email" name="email" placeholder="Email*" class="form-control forms"
-                        style="width: 100%; height: 50px;" required>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="form-4">
-                    <input type="text" name="last_name" placeholder="Last name" class="form-control forms"
-                        style="width: 100%; height: 50px;" required>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="form-4">
-                    
-                    <select class="form-select forms py-2" id="mySelect" name="service" required>
-                        <option>Select a service</option>
-                            <option>Hotline</option>
-                            <option>PBX</option>
-                            <option>SMS</option>
-                            <option>API</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="text-area" style="padding-bottom: 20px">
-                    <textarea name="message" rows="10" class="form-control" placeholder="Message"
-                        style="resize: none; color: #cbcbcb" required></textarea>
-                </div>
-            </div>
-            <div class="btn-div">
-                <button class="btn btn-primary" type="submit">Send</button>
-            </div>
-        </div>
-    </form>
-</div>
             <!-- /.container -->
         </section>
         <section id="sec-3">
@@ -395,7 +346,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="col-lg-4">
                             <div class="widget">
                                 <div class="footer-image">
-                                    <a href="index.php"><img src="./assets/img/voitex-images/footer-img.PNG" alt=""></a>
+                                    <a href="index.html"><img src="./assets/img/voitex-images/footer-img.PNG" alt=""></a>
                                 </div>
                                 <p class="mb-5 voitex">User-friendly, no-code IVR & VoIP solutions for leading hotlines and businesses. offering utmost flexibility and superior service.</p>
                                 <!-- <p class="mb-1 news-letter voitex-opacity">Sign up for our newsletter </p> -->
@@ -413,7 +364,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="widget">
                                 <h4 class="widget-title text-white mb-3">Solutions</h4>
                                 <ul class="list-unstyled text-reset mb-0">
-                                    <li><a href="index.php">Hotline</a></li>
+                                    <li><a href="index.html">Hotline</a></li>
                                     <li><a href="landing-pbx.html">PBX</a></li>
                                     <li><a href="Landingpage-sms.html">SMS</a></li>
                                     <li><a href="Landingpage-API.html">API</a></li>
@@ -441,7 +392,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <ul class="list-unstyled text-reset  mb-0">
                                     <li><a href="About-Us.html">About</a></li>
                                     <li><a href="#">Pricing</a></li>
-                                    <li><a href="Contact-Form.php">Contact</a></li>
+                                    <li><a href="Contact-form.html">Contact</a></li>
                                     <li><a href="privacypolicy.html">Privacy Policy</a></li>
                                 </ul>
                             </div>
@@ -490,5 +441,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <script>
     AOS.init();
 </script>
-
+<!-- FORM HANDLER -->
+<script>
+    $(document).ready(function() {
+        $('#contactForm').on('submit', function(e) {
+            e.preventDefault(); // Prevent the form from submitting the default way
+            
+            $.ajax({
+                url: 'php/form-handler.php', // Update the URL to point to your PHP file
+                type: 'POST',
+                data: $(this).serialize(),
+                dataType: 'json',
+                success: function(response) {
+                    if (response.status === 'success') {
+                        alert(response.message);
+                        window.location.href = 'thankyou.php';
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    alert('An error occurred: ' + error);
+                }
+            });
+        });
+    });
+</script>
 </html>

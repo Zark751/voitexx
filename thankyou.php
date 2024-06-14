@@ -28,7 +28,7 @@ header#header{
 
 	<header class="site-header" id="header">
 	<div class="voitex-image"> 
-		<a  href="index.php"><img src="./assets/img/voitex-images/logo-1.svg" alt=""  style="display: table; margin: auto; width: 400px; height: 300px; cursor: pointer;"></a>
+		<a  href="index.html"><img src="./assets/img/voitex-images/logo-1.svg" alt=""  style="display: table; margin: auto; width: 400px; height: 300px; cursor: pointer;"></a>
 	</div>
 		<h1 class="site-header__title" data-lead-id="site-header-title">THANK YOU!</h1>
 	</header>
