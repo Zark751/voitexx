@@ -54977,7 +54977,7 @@ button.demo-now {
 @media only screen and (max-width:800px) {
  
   .wrapper-communication .learn-more {
-    margin: 0px 0px 5px 0px;
+    margin: 0px 0px 0px 0px;
   }
 
   #sec8 .slider {
@@ -56521,4 +56521,7 @@ section#sec10 button.btn.btn-primary {
 .myfmmm button.btn.btn-primary {
   float: unset;
   position: unset;
+}
+textarea.form-control {
+  color: black !important;
 }
