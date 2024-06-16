@@ -54939,7 +54939,7 @@ section#sec9 {
 
 section#sec9 .sec9-content h3 {
   padding: 10px 0px;
-  font-size: 20px;
+  font-size: 20px !important;
   line-height: 22px
 }
 
