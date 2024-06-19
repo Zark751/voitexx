@@ -50200,7 +50200,6 @@ input.form-control.footer-form {
   border-end-start-radius: 10px;
   border-start-start-radius: 10px;
   height: 45px;
-  margin-left: -20px !important;
 }
 
 /* main-page ends here  */
@@ -52120,7 +52119,7 @@ button.button-submit {
   background-color: #9854cb;
   font-size: 15px;
   color: white;
-  left: 120px;
+  left: 185px;
   border-radius: 10px;
   padding: 5px 20px;
 }
@@ -53136,9 +53135,10 @@ button.Learn-more-yellow.button-1 {
 }
 
 section#sec7 {
-  background-image: url('../img/voitex-images/comprehensive-image.png');
-  background-size: 100% 100%;
+  background-image: url('../img/voitex-images/experience-voitex-back-2.svg');
+  background-size: cover;
   background-repeat: no-repeat;
+  padding: 60px 0px 0px 0px;
 }
 
 section#sec7 .container.sec7-container {
@@ -53735,10 +53735,10 @@ button.learn-more {
 /* maximize flexibility ends here  */
 /* comprehensive container starts here */
 section#comprehensive-container {
-  background-image: url(../img/voitex-images/comprehensive-image-2.png);
+  background-image: url('../img/voitex-images/landing-pbx-compri-back.svg');
   background-repeat: no-repeat;
   width: 100%;
-  background-size: 100% 100%;
+  background-size: cover;
   background-color: rgb(249 248 255);
   padding: 200px 0px 120px 0px;
 }
@@ -53916,7 +53916,7 @@ button.learn1 {
 }
 
 .compare-plans {
-  display: flex;
+  display: flex;section#sec7
   justify-content: center;
   margin-top: 30px;
 }
@@ -53925,9 +53925,9 @@ button.learn1 {
 /* phone systems end here  */
 /* transform section starts here  */
 section#transform {
-  background-image: url('../img/voitex-images/transfrom-image-landing-pbx-2.png');
+  background-image: url('../img/voitex-images/transform-back.svg');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   width: 100%;
 }
 
@@ -56029,7 +56029,7 @@ footer .row {
 }
 
 input.form-control.footer-form {
-  width: 175px !important;
+  width: 270px !important;
 }
 
 @media (max-width: 991px) {
@@ -56390,7 +56390,11 @@ section.wrapper-communication.overflow-hidden.landing-page-sec-1 .bottom-row-com
 }
 
 /*-----------------------------------------------------------------------------------------------------*/
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+  section#sec6 {
+    padding: 30px 0px;
+}
+}
 
 /*-----------------------------------------------------------------------------------------------------*/
 @media (max-width: 414px) {}
