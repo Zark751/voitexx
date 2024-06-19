@@ -25,6 +25,12 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script>
+       function onSubmit(token) {
+         document.getElementById("contactForm").submit();
+       }
+     </script>
     
 
 
@@ -230,7 +236,7 @@
                               <div class="g-recaptcha" data-sitekey="6LdIh_wpAAAAAGUP1o1Vf60sabfTqxdTyn5QRLvh"></div>
 
                         <div class="btn-div">
-                            <button class="btn btn-primary" type="submit">Send</button>
+                            <button class="btn btn-primary g-recaptcha" type="submit" data-sitekey="6LcVqvwpAAAAAKQeBobYH-tKdg1SpNjKsoCIusrG" data-callback="onSubmit">Send</button>
                         </div>
                     </div>
                 </form>
@@ -262,7 +268,7 @@
                             </div>
                             <div class="text-wrapper">
                                 <h4 class="all-text-color">Our team is here to assist</h4>
-                                <p class="all-text-color">Reach out to us anytime at support&#64;voitex.com or (845) 951-1000 for any questions or assistance.
+                                <p class="all-text-color">Reach out to us anytime at support&#64;voitex.com or 845.951.1000 for any questions or assistance.
                                 </p>
                             </div>
                             <div class="btn-wrapper btn-2">
