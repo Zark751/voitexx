@@ -53917,7 +53917,7 @@ button.learn1 {
 }
 
 .compare-plans {
-  display: flex;section#sec7
+  display: flex;
   justify-content: center;
   margin-top: 30px;
 }
@@ -54865,10 +54865,6 @@ section#phone-system ul.telephone-specs-2 {
 
 @media only screen and (max-width:360px) {
 
-
-  .bg-image {
-    /* height: 300px; */
-  }
 
   .bg-image-sec-5 {
     height: 200px;

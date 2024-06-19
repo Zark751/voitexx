@@ -5,12 +5,12 @@ error_reporting(E_ALL);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
+    $phone = $_POST['phone'];
     $email = $_POST['email'];
     $message_content = $_POST['message'];
     $service = $_POST['service'];
 
-    $message = "New Form Request:<br><br>First Name: $first_name<br>Last Name: $last_name<br>Email: $email<br>Service: $service<br>Message: $message_content";
+    $message = "New Form Request:<br><br>Name: $first_name<br>Phone: $phone<br>Email: $email<br>Service: $service<br>Message: $message_content";
 
     $data = [
         'message' => $message,
