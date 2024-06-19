@@ -52307,6 +52307,7 @@ textarea.form-control::placeholder {
   border-radius: 10px;
   padding: 5px 40px;
   color: white;
+  margin-top: 15px;
 }
 
 #first-sec .btn-div {
@@ -56030,6 +56031,7 @@ footer .row {
 
 input.form-control.footer-form {
   width: 270px !important;
+  margin: 0px !important;
 }
 
 @media (max-width: 991px) {
@@ -56522,6 +56524,7 @@ line-height: 19.79px !important;
 section#sec10 button.btn.btn-primary {
   position: unset;
   float: unset;
+  margin-top: 15px;
 }
 .myfmmm button.btn.btn-primary {
   float: unset;
@@ -56533,4 +56536,7 @@ textarea.form-control {
 ul.list-unstyled.text-reset.mb-0{
 font-size: 14px !important;
 
+}
+a.dropdown-link img {
+  height:17px !important;
 }
