@@ -50200,6 +50200,7 @@ input.form-control.footer-form {
   border-end-start-radius: 10px;
   border-start-start-radius: 10px;
   height: 45px;
+  margin-left: -20px !important;
 }
 
 /* main-page ends here  */
@@ -52119,7 +52120,7 @@ button.button-submit {
   background-color: #9854cb;
   font-size: 15px;
   color: white;
-  left: 153px;
+  left: 120px;
   border-radius: 10px;
   padding: 5px 20px;
 }
@@ -56524,4 +56525,8 @@ section#sec10 button.btn.btn-primary {
 }
 textarea.form-control {
   color: black !important;
+}
+ul.list-unstyled.text-reset.mb-0{
+font-size: 14px !important;
+
 }
